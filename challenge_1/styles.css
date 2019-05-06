@@ -2,9 +2,16 @@
 .top-page {
   margin: 5%;
   text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+#message {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 table {
-  width: 40%;
+  width: 35%;
   border-collapse: collapse;
   margin-left: auto; 
   margin-right: auto;
