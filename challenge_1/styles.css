@@ -10,6 +10,11 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.reset {
+  margin: 40px;
+  text-align: center;
+}
+
 table {
   width: 35%;
   border-collapse: collapse;

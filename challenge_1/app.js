@@ -9,8 +9,24 @@ board.querySelectorAll("td")
 var turnCounter = 1;
 var oTurn = [];
 var xTurn = [];
+var winningCombos = [['1','4','7'], ['2','5','8'], ['3','6','9'], ['1','2','3'], ['4','5','6'], ['7','8','9'], ['1','5','9'], ['7','5','3'], [2, 4, 6]];
 
-var mes = document.getElementById('message');
+var messageContainer = document.getElementById('message');
+
+function checkWinners (marksArr, name) {
+  for (var i = 0; i < winningCombos.length; i++) {
+    var numWins = 0;
+    for (var j = 0; j < winningCombos[i].length; j++) {
+      if (marksArr.indexOf(winningCombos[i][j]) !== -1) {
+        numWins++;
+      }
+    }
+    if (numWins === 3) {
+      alert('Player' + name + 'wins!' );
+      // newPlayerGame();
+    }
+  }
+}
 
 //check to see if the current cell has a length
 function handlePlayerMove (event) {
@@ -21,15 +37,32 @@ function handlePlayerMove (event) {
       xTurn.push(event.target.id);
       event.target.innerHTML = 'X';
     } else {
-      xTurn.push(event.target.id);
+      oTurn.push(event.target.id);
       event.target.innerHTML = 'O';
     }
   } else {
     var message = document.createElement('p');
     message.innerHTML = 'Choose another square!'
-    mes.appendChild(message);
+    messageContainer.appendChild(message);
     turnCounter--;
   }
   turnCounter++;
+  //check to see if there is a winning combination if the x's are equal
+  checkWinners(xTurn, 'X');
+  checkWinners(oTurn, 'O');
+
+  if (turnCounter === 10) {
+    alert('Its a tie, play again!');
+  }
 };
 
+
+var button = document.querySelector('button');
+
+button.addEventListener('click', event => {
+  button.innerHTML = ""
+});
+
+  //.forEach(elem => document.getElementById(elem).innerHTML = "")})
+
+  
