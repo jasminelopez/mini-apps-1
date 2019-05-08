@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <link href="styling.css" rel="stylesheet" type="text/css">
   <script src="app.js"></script>
   <head>
     <meta charset="utf-8">
     <title>CSV Report Generator</title>
     <h1>CSV Report Generator!</h1>
-    <form action="http://127.0.0.1:8080/adddata" method="post">
-        <textarea rows = "5" cols = "50" name = "description">
+    <form action="http://127.0.0.1:8080/data" method="post">
+        <textarea rows="5" cols="50" name="info">
             Add your JSON data here...
-         </textarea>
-         <input type = "submit" value = "submit" />
+        </textarea>
+        <input type="submit" value="submit" />
     </form>
   </head>
   <body>
