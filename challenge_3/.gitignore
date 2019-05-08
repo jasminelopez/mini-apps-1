@@ -1,1 +1,8 @@
 public/app.js
+package-lock.json
+
+## Mac OSX ##
+.DS_Store
+
+## NPM ##
+node_modules/
