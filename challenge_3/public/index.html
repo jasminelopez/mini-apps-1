@@ -1,14 +1,17 @@
 
 <!DOCTYPE html>
 <html>
-  <link href="styling.css" rel="stylesheet" type="text/css">
-  <script src="app.js"></script>
   <head>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <meta charset="utf-8">
     <title>Multistep Checkout Experience</title>
   </head>
   <body>
-    <h1> Multstep Checkout Homepage</h1>
-    <button id="next">Next</button>
+    <h1> Multistep Checkout Homepage</h1>
+    <button id="next">Checkout</button>
+    <!--link of compiled component file for app.js should go here -->
+    <div id="root"></div>
+    <script type="module" src="./app.js"></script>
   </body>
 </html>

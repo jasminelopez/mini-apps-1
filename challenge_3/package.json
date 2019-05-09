@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run test",
     "start": "node server.js",
-    "bable": "./node_modules/.bin/babel client --watch --out-dir public --presets @babel/preset-react --source-maps inline"
+    "bable": "./node_modules/.bin/babel client/app.jsx --watch --out-dir public --presets @babel/preset-react --source-maps inline"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
