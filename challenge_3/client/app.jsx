@@ -1,10 +1,38 @@
 
 class MAsterForm extends React.Component {
-  render () {
-    return 
-      <h1>Hello! This is a test for Babel!</h1>
-      <button action="/nameform" method="get"></button>
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      currentStep: 1, // Default is Step 1
+      email: '',
+      username: '',
+      password: '', 
+    }
+    //Bind the submission to handle the change 
+    this.handleChange = this.handleChange.bind(this)
+
   }
+
+   // Use the submitted data to set the state
+  handleChange(event) {
+    const {name, value} = event.target
+    this.setState({
+      [name]: value
+    })    
+  }
+
+  // Trigger an alert on form submission
+  handleSubmit = (event) => {
+    event.preventDefault()
+    const {email, username, password } = this.state
+    alert (`Your registation detail: \n
+      Email: ${email}' \n 
+      Username: ${username} \n
+      Password: ${password}`)
+  }
+
+  //render UI here
 }
 
 class Step1 extends React.Component {
